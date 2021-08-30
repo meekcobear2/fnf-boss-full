@@ -164,6 +164,15 @@ class DialogueBox extends FlxSpriteGroup
 			add(portraitRight);
 			portraitRight.visible = false;
 		}
+
+		portraitMiddle = new FlxSprite(695, 0);
+		portraitMiddle.frames = Paths.getSparrowAtlas('dialogportraits/mysteryPortrait', 'shared');
+		portraitMiddle.animation.addByPrefix('enter', 'bfPortrait idle', 24, false);
+		portraitMiddle.setGraphicSize(Std.int(portraitMiddle.width * PlayState.daPixelZoom * 0.1));
+		portraitMiddle.updateHitbox();
+		portraitMiddle.scrollFactor.set();
+		add(portraitMiddle);
+		portraitMiddle.visible = false;
 		
 		box.animation.play('normalOpen');
 		box.setGraphicSize(Std.int(box.width * PlayState.daPixelZoom * 0.9));
@@ -249,6 +258,7 @@ class DialogueBox extends FlxSpriteGroup
 						box.alpha -= 1 / 5;
 						bgFade.alpha -= 1 / 5 * 0.7;
 						portraitLeft.visible = false;
+						portraitMiddle.visible = false
 						portraitRight.visible = false;
 						swagDialogue.alpha -= 1 / 5;
 						dropText.alpha = swagDialogue.alpha;
@@ -312,6 +322,7 @@ class DialogueBox extends FlxSpriteGroup
 					portraitLeft.visible = true;
 					portraitLeft.animation.play('enter');
 				}
+		}
 	}
 
 	function cleanDialog():Void
