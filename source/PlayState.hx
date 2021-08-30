@@ -1244,6 +1244,8 @@ class PlayState extends MusicBeatState
 					schoolIntro(doof);
 				case 'welcome':
 					schoolIntro(doof);
+				case 'fustration':
+					schoolIntro(doof);
 				default:
 					startCountdown();
 			}
