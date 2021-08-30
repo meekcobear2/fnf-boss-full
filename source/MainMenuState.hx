@@ -182,7 +182,7 @@ class MainMenuState extends MusicBeatState
 			{
 				if (optionShit[curSelected] == 'donate')
 				{
-					fancyOpenURL("https://ninja-muffin24.itch.io/funkin");
+					fancyOpenURL("https://www.youtube.com/channel/UCFjXgKaB0qIsBx6xa96kL9A");
 				}
 				else
 				{

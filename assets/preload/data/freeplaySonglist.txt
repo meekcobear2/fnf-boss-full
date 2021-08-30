@@ -1,2 +1,3 @@
 Welcome:boss:1
 Fustration:boss:1
+CHaos:boss:1
