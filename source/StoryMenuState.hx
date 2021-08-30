@@ -25,7 +25,7 @@ class StoryMenuState extends MusicBeatState
 	var scoreText:FlxText;
 
 	var weekData:Array<Dynamic> = [
-		['Welcome']
+		['Welcome', 'Fustration']
 	];
 	var curDifficulty:Int = 1;
 
