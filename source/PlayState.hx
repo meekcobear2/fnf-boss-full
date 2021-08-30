@@ -398,6 +398,8 @@ class PlayState extends MusicBeatState
 				dialogue = CoolUtil.coolTextFile(Paths.txt('thorns/thornsDialogue'));
 			case 'welcome':
 				dialogue = CoolUtil.coolTextFile(Paths.txt('welcome/dialog'));
+			case 'fustration':
+				dialogue = CoolUtil.coolTextFile(Paths.txt('fustration/dialog'));
 		}
 
 		//defaults if no stage was found in chart
