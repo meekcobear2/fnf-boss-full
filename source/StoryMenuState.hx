@@ -25,7 +25,7 @@ class StoryMenuState extends MusicBeatState
 	var scoreText:FlxText;
 
 	var weekData:Array<Dynamic> = [
-		['Welcome', 'Fustration']
+		['Welcome', 'Fustration', 'Chaos']
 	];
 	var curDifficulty:Int = 1;
 
@@ -36,7 +36,7 @@ class StoryMenuState extends MusicBeatState
 	];
 
 	var weekNames:Array<String> = [
-		"Void State"
+		"The Mind State"
 	];
 
 	var txtWeekTitle:FlxText;
