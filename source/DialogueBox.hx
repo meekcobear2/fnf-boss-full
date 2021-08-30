@@ -315,13 +315,13 @@ class DialogueBox extends FlxSpriteGroup
 				portraitMiddle.visible = false;
 				if (!portraitRight.visible)
 				{
-					portraitRight.visible = true;
-					portraitRight.animation.play('enter');
+					portraitMiddle.visible = true;
+					portraitMiddle.animation.play('enter');
 				}
 				if (!portraitLeft.visible)
 				{
-					portraitLeft.visible = true;
-					portraitLeft.animation.play('enter');
+					portraitMiddle.visible = false;
+					portraitMiddle.animation.play('enter');
 				}
 		}
 	}
