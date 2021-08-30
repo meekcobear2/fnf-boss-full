@@ -49,6 +49,9 @@ class DialogueBox extends FlxSpriteGroup
 			case 'welcome':
 				FlxG.sound.playMusic(Paths.music('Lunchbox'), 0);
 				FlxG.sound.music.fadeIn(1, 0, 0.8);
+			case 'fustration':
+				FlxG.sound.playMusic(Paths.music('Lunchbox'), 0);
+				FlxG.sound.music.fadeIn(1, 0, 0.8);
 		}
 
 		bgFade = new FlxSprite(-200, -200).makeGraphic(Std.int(FlxG.width * 1.3), Std.int(FlxG.height * 1.3), 0xFFB3DFd8);
@@ -100,6 +103,15 @@ class DialogueBox extends FlxSpriteGroup
 				box.height = 230;
 				box.x = 68;
 				box.y = 370;
+			case 'fustration':
+				hasDialog = true;
+				box.frames = Paths.getSparrowAtlas('speech_bubble_talking', 'shared');
+				box.animation.addByPrefix('normalOpen', 'Speech Bubble Normal Open', 24, false);
+				box.animation.addByIndices('normal', 'speech bubble normal', [4], "", 24);
+				box.width = 230;
+				box.height = 230;
+				box.x = 68;
+				box.y = 370;
 		}
 
 		this.dialogueList = dialogueList;
@@ -118,7 +130,7 @@ class DialogueBox extends FlxSpriteGroup
 			add(portraitLeft);
 			portraitLeft.visible = false;
 		}
-		else if (PlayState.SONG.song.toLowerCase() == 'welcome')
+		else if (PlayState.SONG.song.toLowerCase() == 'welcome' || PlayState.SONG.song.toLowerCase() == 'fustration')
 		{
 			portraitLeft = new FlxSprite(695, 0);
 			portraitLeft.frames = Paths.getSparrowAtlas('dialogportraits/bossPortrait', 'shared');
@@ -141,7 +153,7 @@ class DialogueBox extends FlxSpriteGroup
 			add(portraitRight);
 			portraitRight.visible = false;
 		}
-		else if (PlayState.SONG.song.toLowerCase() == 'welcome')
+		else if (PlayState.SONG.song.toLowerCase() == 'welcome' || PlayState.SONG.song.toLowerCase() == 'fustration')
 		{
 			portraitRight = new FlxSprite(695, 0);
 			portraitRight.frames = Paths.getSparrowAtlas('dialogportraits/bfPortrait', 'shared');
