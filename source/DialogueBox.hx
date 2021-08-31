@@ -119,8 +119,8 @@ class DialogueBox extends FlxSpriteGroup
 			case 'chaos':
 				hasDialog = true;
 				box.frames = Paths.getSparrowAtlas('speech_bubble_talking', 'shared');
-				box.animation.addByPrefix('normalOpen', 'speech bubble loud open', 24, false);
-				box.animation.addByIndices('normal', 'AHH speech bubble', [4], "", 24);
+				box.animation.addByPrefix('normalOpen', 'Speech Bubble Normal Open', 24, false);
+				box.animation.addByIndices('normal', 'speech bubble normal', [4], "", 24);
 				box.width = 230;
 				box.height = 230;
 				box.x = 68;
