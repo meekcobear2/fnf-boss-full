@@ -528,6 +528,19 @@ class Character extends FlxSprite
 				addOffset("singRIGHT", -221, -6);
 				addOffset("singLEFT", 20, -8);
 				addOffset("singDOWN", 6, -18);
+			case 'insaneboss':
+				frames = Paths.getSparrowAtlas('characters/InsaneBoss');
+				animation.addByPrefix('idle', 'InsaneBoss idle', 24, false);
+				animation.addByPrefix('singUP', 'InsaneBoss up', 24, false);
+				animation.addByPrefix('singDOWN', 'InsaneBoss down', 24, false);
+				animation.addByPrefix('singLEFT', 'InsaneBoss left', 24, false);
+				animation.addByPrefix('singRIGHT', 'InsaneBoss right', 24, false);
+
+				addOffset('idle');
+				addOffset("singUP", 6, 37);
+				addOffset("singRIGHT", -53, 0);
+				addOffset("singLEFT", 36, -9);
+				addOffset("singDOWN", 1, -41);
 		}
 
 		dance();
