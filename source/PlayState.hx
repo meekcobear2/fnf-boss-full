@@ -4877,9 +4877,9 @@ class PlayState extends MusicBeatState
 	function HealthDrain():Void //code from vs bob
 		{
 			badNoteHit();
-			new FlxTimer().start(0.01, function(tmr:FlxTimer)
+			new FlxTimer().start(0.02, function(tmr:FlxTimer)
 			{
-				health -= 0.002;
+				health -= 0.001;
 			}, 300);
 		}
 
