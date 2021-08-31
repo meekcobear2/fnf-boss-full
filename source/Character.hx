@@ -515,6 +515,19 @@ class Character extends FlxSprite
 				addOffset("singLEFT", 38, -16);
 				addOffset("singDOWN", 3, -38);
 				playAnim('idle');
+			case 'chaosboss':
+				frames = Paths.getSparrowAtlas('characters/chaosboss_assets');
+				animation.addByPrefix('idle', 'chaosIdle', 24, false);
+				animation.addByPrefix('singUP', 'chaosUp', 24, false);
+				animation.addByPrefix('singDOWN', 'chaosDown', 24, false);
+				animation.addByPrefix('singLEFT', 'chaosLeft', 24, false);
+				animation.addByPrefix('singRIGHT', 'chaosRight', 24, false);
+
+				addOffset('idle');
+				addOffset("singUP", 7, 7);
+				addOffset("singRIGHT", -221, -6);
+				addOffset("singLEFT", 20, -8);
+				addOffset("singDOWN", 6, -18);
 		}
 
 		dance();
