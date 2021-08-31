@@ -53,6 +53,9 @@ class DialogueBox extends FlxSpriteGroup
 			case 'fustration':
 				FlxG.sound.playMusic(Paths.music('Lunchbox'), 0);
 				FlxG.sound.music.fadeIn(1, 0, 0.8);
+			case 'chaos':
+				FlxG.sound.playMusic(Paths.music('LunchboxScary'), 0);
+				FlxG.sound.music.fadeIn(1, 0, 0.8);
 		}
 
 		bgFade = new FlxSprite(-200, -200).makeGraphic(Std.int(FlxG.width * 1.3), Std.int(FlxG.height * 1.3), 0xFFB3DFd8);
@@ -113,6 +116,15 @@ class DialogueBox extends FlxSpriteGroup
 				box.height = 230;
 				box.x = 68;
 				box.y = 370;
+			case 'chaos':
+				hasDialog = true;
+				box.frames = Paths.getSparrowAtlas('speech_bubble_talking', 'shared');
+				box.animation.addByPrefix('normalOpen', 'speech bubble loud open', 24, false);
+				box.animation.addByIndices('normal', 'AHH speech bubble', [4], "", 24);
+				box.width = 230;
+				box.height = 230;
+				box.x = 68;
+				box.y = 370;
 		}
 
 		this.dialogueList = dialogueList;
@@ -142,6 +154,17 @@ class DialogueBox extends FlxSpriteGroup
 			add(portraitLeft);
 			portraitLeft.visible = false;
 		}
+		else if (PlayState.SONG.song.toLowerCase() == 'chaos')
+			{
+				portraitLeft = new FlxSprite(695, 0);
+				portraitLeft.frames = Paths.getSparrowAtlas('dialogportraits/chaosPortrait', 'shared');
+				portraitLeft.animation.addByPrefix('enter', 'chaosPortrait idle', 24, false);
+				portraitLeft.setGraphicSize(Std.int(portraitLeft.width * PlayState.daPixelZoom * 0.1));
+				portraitLeft.updateHitbox();
+				portraitLeft.scrollFactor.set();
+				add(portraitLeft);
+				portraitLeft.visible = false;
+			}
 
 		if (PlayState.SONG.song.toLowerCase() == 'senpai' || PlayState.SONG.song.toLowerCase() == 'roses' || PlayState.SONG.song.toLowerCase() == 'thorns')
 		{
@@ -154,7 +177,7 @@ class DialogueBox extends FlxSpriteGroup
 			add(portraitRight);
 			portraitRight.visible = false;
 		}
-		else if (PlayState.SONG.song.toLowerCase() == 'welcome' || PlayState.SONG.song.toLowerCase() == 'fustration')
+		else if (PlayState.SONG.song.toLowerCase() == 'welcome' || PlayState.SONG.song.toLowerCase() == 'fustration' || PlayState.SONG.song.toLowerCase() == 'chaos')
 		{
 			portraitRight = new FlxSprite(695, 0);
 			portraitRight.frames = Paths.getSparrowAtlas('dialogportraits/bfPortrait', 'shared');
@@ -251,7 +274,7 @@ class DialogueBox extends FlxSpriteGroup
 				{
 					isEnding = true;
 
-					if (PlayState.SONG.song.toLowerCase() == 'senpai' || PlayState.SONG.song.toLowerCase() == 'thorns' || PlayState.SONG.song.toLowerCase() == 'welcome' || PlayState.SONG.song.toLowerCase() == 'fustration')
+					if (PlayState.SONG.song.toLowerCase() == 'senpai' || PlayState.SONG.song.toLowerCase() == 'thorns' || PlayState.SONG.song.toLowerCase() == 'welcome' || PlayState.SONG.song.toLowerCase() == 'fustration' || PlayState.SONG.song.toLowerCase() == 'chaos')
 						FlxG.sound.music.fadeOut(2.2, 0);
 
 					new FlxTimer().start(0.2, function(tmr:FlxTimer)
