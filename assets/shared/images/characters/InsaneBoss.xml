@@ -11,4 +11,6 @@
 <SubTexture name="InsaneBoss down0001" x="1026" y="1342" width="513" height="671" frameX="0" frameY="0" frameWidth="513" frameHeight="671" />
 <SubTexture name="InsaneBoss right0000" x="0" y="2013" width="513" height="671" frameX="0" frameY="0" frameWidth="513" frameHeight="671" />
 <SubTexture name="InsaneBoss right0001" x="513" y="2013" width="513" height="671" frameX="0" frameY="0" frameWidth="513" frameHeight="671" />
+<SubTexture name="InsaneBoss up0000" x="1026" y="1342" width="513" height="671" frameX="0" frameY="0" frameWidth="513" frameHeight="671" />
+<SubTexture name="InsaneBoss up0001" x="0" y="2700" width="513" height="671" frameX="0" frameY="0" frameWidth="513" frameHeight="671" />
 </TextureAtlas>

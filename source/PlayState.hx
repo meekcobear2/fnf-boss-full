@@ -932,6 +932,9 @@ class PlayState extends MusicBeatState
 			case 'chaosboss':
 				dad.x -= 334;
 				dad.y += 75;
+			case 'insaneboss':
+				dad.x -= 77;
+				dad.y += 23;
 		}
 
 
