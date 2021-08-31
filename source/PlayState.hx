@@ -933,6 +933,18 @@ class PlayState extends MusicBeatState
 				dad.x -= 334;
 				dad.y += 75;
 			case 'insaneboss':
+				if (FlxG.save.data.distractions)
+					{
+						// trailArea.scrollFactor.set();
+						if (!PlayStateChangeables.Optimize)
+						{
+							var evilTrail = new FlxTrail(dad, null, 4, 24, 0.3, 0.069);
+							// evilTrail.changeValuesEnabled(false, false, false, false);
+							// evilTrail.changeGraphic()
+							add(evilTrail);
+						}
+						// evilTrail.scrollFactor.set(1.1, 1.1);
+					}
 				dad.x -= 77;
 				dad.y += 23;
 		}
@@ -4867,7 +4879,7 @@ class PlayState extends MusicBeatState
 			badNoteHit();
 			new FlxTimer().start(0.01, function(tmr:FlxTimer)
 			{
-				health -= 0.005;
+				health -= 0.002;
 			}, 300);
 		}
 
